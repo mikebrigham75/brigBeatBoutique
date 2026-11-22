@@ -1,47 +1,60 @@
 {
   "sample_rate": 44100,
   "channels": 2,
+  "target_rms": 6200,
   "tracks": {
-    "01_funk_intro": {
-      "file": "01_james_brown.mp3",
-      "start_sec": 0.0,
-      "end_sec": 17.78,
+    "01_funk_intro_break": {
+      "file": "James Brown- Give It Up Or Turn It a Loose.m4a",
+      "start_sec": 262.75,
+      "end_sec": 280.53,
       "loop_count": 2,
-      "source_bpm": 108.0,
-      "target_bpm": 108.0,
-      "notes": "8-bar drum break looped x2 = 16 bars"
+      "notes": "8-bar James Brown drum break looped x2 = 16 bars (~35.6s)"
     },
-    "02_indie": {
-      "file": "02_indie.mp3",
-      "start_sec": 0.0,
-      "end_sec": 60.0,
+    "01b_movie_quote_loaded": {
+      "file": "Primal Scream - Loaded (Andy Weatherall Mix - Official Audio).m4a",
+      "start_sec": 2.8,
+      "end_sec": 17.3,
+      "target_rms": 5200,
+      "notes": "Peter Fonda Wild Angels movie quote layered on Track 4 over James Brown bars 9-16"
+    },
+    "02_indie_loaded": {
+      "file": "Primal Scream - Loaded (Andy Weatherall Mix - Official Audio).m4a",
+      "start_sec": 40.0,
+      "end_sec": 100.0,
       "turntable_brake_sec": 1.5,
-      "notes": "90s Indie with 1.5s turntable brake at the end"
+      "notes": "Primal Scream Loaded main drop (40.0s) with 1.5s -85% turntable brake at end"
     },
-    "03_acid_house": {
-      "file": "03_chemical_brothers_goodbye.mp3",
+    "03_acid_goodbye": {
+      "file": "The Chemical Brothers - Goodbye (Official Music Video).m4a",
+      "start_sec": 44.25,
+      "end_sec": 104.25,
+      "notes": "Chemical Brothers Goodbye massive acid peak slam"
+    },
+    "04a_vocal_hook_rockafeller": {
+      "file": "Fatboy Slim - Rockafeller Skank.m4a",
       "start_sec": 0.0,
-      "end_sec": 60.0,
-      "notes": "303 acid line slams in right as brake stops"
+      "end_sec": 2.65,
+      "target_rms": 6400,
+      "notes": "Right about now, the funk soul brother vocal hook into dead air"
     },
-    "04_satisfaction_skank": {
-      "file": "04_satisfaction_skank.mp3",
+    "04b_satisfaction_skank": {
+      "file": "Fatboy Slim & The Rolling Stones - Satisfaction Skank.m4a",
       "start_sec": 0.0,
       "end_sec": 40.0,
-      "lead_in_silence_sec": 1.0,
-      "notes": "1s dead air before Satisfaction Skank drops"
+      "notes": "Fatboy Slim & Rolling Stones Satisfaction Skank riff slam"
     },
-    "05_rockafeller_skank": {
-      "file": "05_rockafeller_skank.mp3",
-      "start_sec": 0.0,
-      "end_sec": 35.0,
-      "notes": "Ride into the speeding-up breakdown peak"
+    "05_rockafeller_breakdown": {
+      "file": "Fatboy Slim - Rockafeller Skank.m4a",
+      "start_sec": 161.0,
+      "end_sec": 192.0,
+      "notes": "Rockafeller Skank speeding-up breakdown straight to 192.0s peak"
     },
-    "06_jungle_finale": {
-      "file": "06_jungle_finale.mp3",
-      "start_sec": 0.0,
-      "end_sec": 65.0,
-      "notes": "Hard-cut Amen breakbeats for the final minute"
+    "06_jungle_inner_city_life": {
+      "file": "Inner City Life (Original Version).m4a",
+      "start_sec": 50.45,
+      "end_sec": 117.45,
+      "fade_out_sec": 3.5,
+      "notes": "Goldie Inner City Life explosive 90s Jungle drop (50.45s) ride-out"
     }
   }
 }
