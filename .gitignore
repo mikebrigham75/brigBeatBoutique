@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Audacity temp / lock / legacy data files
+*.aup3-wal
+*.aup3-shm
+*_data/
+*.aup.bak
+
+# Large audio assets & rendered mixes (keep folder structure via .gitkeep)
+audio/*
+!audio/.gitkeep
+exports/*
+!exports/.gitkeep
+projects/*.aup3
