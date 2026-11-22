@@ -1,0 +1,47 @@
+{
+  "sample_rate": 44100,
+  "channels": 2,
+  "tracks": {
+    "01_funk_intro": {
+      "file": "01_james_brown.mp3",
+      "start_sec": 0.0,
+      "end_sec": 17.78,
+      "loop_count": 2,
+      "source_bpm": 108.0,
+      "target_bpm": 108.0,
+      "notes": "8-bar drum break looped x2 = 16 bars"
+    },
+    "02_indie": {
+      "file": "02_indie.mp3",
+      "start_sec": 0.0,
+      "end_sec": 60.0,
+      "turntable_brake_sec": 1.5,
+      "notes": "90s Indie with 1.5s turntable brake at the end"
+    },
+    "03_acid_house": {
+      "file": "03_chemical_brothers_goodbye.mp3",
+      "start_sec": 0.0,
+      "end_sec": 60.0,
+      "notes": "303 acid line slams in right as brake stops"
+    },
+    "04_satisfaction_skank": {
+      "file": "04_satisfaction_skank.mp3",
+      "start_sec": 0.0,
+      "end_sec": 40.0,
+      "lead_in_silence_sec": 1.0,
+      "notes": "1s dead air before Satisfaction Skank drops"
+    },
+    "05_rockafeller_skank": {
+      "file": "05_rockafeller_skank.mp3",
+      "start_sec": 0.0,
+      "end_sec": 35.0,
+      "notes": "Ride into the speeding-up breakdown peak"
+    },
+    "06_jungle_finale": {
+      "file": "06_jungle_finale.mp3",
+      "start_sec": 0.0,
+      "end_sec": 65.0,
+      "notes": "Hard-cut Amen breakbeats for the final minute"
+    }
+  }
+}
