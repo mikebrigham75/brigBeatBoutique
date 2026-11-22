@@ -65,24 +65,21 @@ def gen_dub_siren(dur: float = 2.2) -> tuple[list[float], list[float]]:
 
 
 def gen_jungle_airhorn() -> tuple[list[float], list[float]]:
-    """Classic triple-blast 90s sound-system airhorn (ta-ta-taaa!)."""
-    bursts = [(0.0, 0.14), (0.19, 0.14), (0.38, 0.72)]
-    total = int(1.35 * SR)
+    """Single punchy 90s sound-system airhorn blast with tape delay tail."""
+    length_t = 0.85
+    total = int(1.1 * SR)
     mono = [0.0] * total
     # Detuned brassy horn harmonics (F4 + A4 + C5 + slight detune)
     freqs = [349.23, 353.0, 440.0, 523.25, 698.46]
-    for start_t, length_t in bursts:
-        s_idx = int(start_t * SR)
-        l_idx = int(length_t * SR)
-        for j in range(l_idx):
-            t = j / SR
-            pitch_drop = 1.0 - 0.03 * (t / length_t)
-            val = sum(math.sin(2 * math.pi * f * pitch_drop * t) for f in freqs) / len(freqs)
-            # Soft clip for horn grit
-            val = math.tanh(val * 2.4)
-            env = min(1.0, t / 0.012) * min(1.0, (length_t - t) / 0.03)
-            mono[s_idx + j] += val * env
-    return add_tape_delay(mono, delay_sec=0.19, feedback=0.42)
+    l_idx = int(length_t * SR)
+    for j in range(l_idx):
+        t = j / SR
+        pitch_drop = 1.0 - 0.025 * (t / length_t)
+        val = sum(math.sin(2 * math.pi * f * pitch_drop * t) for f in freqs) / len(freqs)
+        val = math.tanh(val * 2.5)
+        env = min(1.0, t / 0.01) * min(1.0, (length_t - t) / 0.04)
+        mono[j] = val * env
+    return add_tape_delay(mono, delay_sec=0.19, feedback=0.40)
 
 
 def gen_radio_static(dur: float = 4.0) -> tuple[list[float], list[float]]:
